@@ -1,0 +1,801 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DEVLABCONSTRUCTIONS | Premium Construction & Engineering</title>
+    <meta name="description" content="Building The Future With Precision & Excellence. Premium construction, architecture, and engineering services.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Montserrat:wght@500;600;700;800&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        darkNavy: '#0F172A',
+                        premiumDark: '#111827',
+                        luxuryOrange: '#F59E0B',
+                        lightGray: '#E5E7EB',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        heading: ['Montserrat', 'sans-serif'],
+                        accent: ['Poppins', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-premiumDark text-lightGray font-sans antialiased overflow-x-hidden selection:bg-luxuryOrange selection:text-white">
+
+    <!-- Cursor Glow -->
+    <div class="cursor-glow hidden lg:block"></div>
+
+    <!-- Preloader -->
+    <div id="preloader" class="fixed inset-0 z-[100] bg-premiumDark flex items-center justify-center transition-opacity duration-1000">
+        <div class="flex flex-col items-center">
+            <div class="w-16 h-16 border-4 border-darkNavy border-t-luxuryOrange rounded-full animate-spin"></div>
+            <span class="mt-4 text-luxuryOrange font-heading font-bold tracking-widest uppercase">DEVLABCONSTRUCTIONS</span>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 py-4 px-6 md:px-12">
+        <div class="max-w-7xl mx-auto flex justify-between items-center bg-darkNavy/80 backdrop-blur-md border border-white/10 rounded-2xl px-6 py-3">
+            <a href="#" class="text-2xl font-heading font-bold text-white flex items-center gap-2">
+                <i class="fa-solid fa-building text-luxuryOrange"></i> DEVLAB<span class="text-luxuryOrange">CONSTRUCTIONS</span>
+            </a>
+            
+            <div class="hidden md:flex space-x-8 items-center font-accent text-sm font-medium">
+                <a href="#home" class="hover:text-luxuryOrange transition-colors">Home</a>
+                <a href="#about" class="hover:text-luxuryOrange transition-colors">About</a>
+                <a href="#services" class="hover:text-luxuryOrange transition-colors">Services</a>
+                <a href="#projects" class="hover:text-luxuryOrange transition-colors">Projects</a>
+                <a href="#testimonials" class="hover:text-luxuryOrange transition-colors">Testimonials</a>
+            </div>
+
+            <div class="hidden md:block">
+                <a href="#contact" class="px-6 py-2.5 bg-luxuryOrange hover:bg-orange-600 text-white rounded-lg font-accent text-sm font-semibold transition-all transform hover:-translate-y-0.5 hover:shadow-[0_0_15px_rgba(245,158,11,0.5)]">
+                    Get Quote
+                </a>
+            </div>
+
+            <button class="md:hidden text-2xl text-white focus:outline-none" id="mobile-menu-btn">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="fixed inset-0 z-40 bg-premiumDark/95 backdrop-blur-lg transform translate-x-full transition-transform duration-300 flex flex-col justify-center items-center space-y-8 text-xl font-heading font-bold">
+        <a href="#home" class="hover:text-luxuryOrange transition-colors mobile-link">Home</a>
+        <a href="#about" class="hover:text-luxuryOrange transition-colors mobile-link">About Us</a>
+        <a href="#services" class="hover:text-luxuryOrange transition-colors mobile-link">Services</a>
+        <a href="#projects" class="hover:text-luxuryOrange transition-colors mobile-link">Projects</a>
+        <a href="#testimonials" class="hover:text-luxuryOrange transition-colors mobile-link">Testimonials</a>
+        <a href="#contact" class="px-8 py-3 bg-luxuryOrange text-white rounded-lg mobile-link">Contact Us</a>
+    </div>
+
+    <!-- Hero Section -->
+    <section id="home" class="relative h-screen flex items-center justify-center overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <img src="assets/images/hero.png" alt="Construction Hero" class="w-full h-full object-cover parallax-img scale-105" loading="lazy">
+            <div class="absolute inset-0 bg-gradient-to-r from-premiumDark via-premiumDark/80 to-transparent"></div>
+            <div class="absolute inset-0 bg-black/30"></div>
+        </div>
+
+        <div class="relative z-10 w-full max-w-7xl mx-auto px-6 md:px-12 flex flex-col justify-center">
+            <div class="max-w-3xl fade-up">
+                <span class="inline-block py-1 px-3 border border-luxuryOrange/50 bg-luxuryOrange/10 text-luxuryOrange rounded-full text-sm font-semibold tracking-wider mb-6">PREMIUM CONSTRUCTION</span>
+                <h1 class="text-5xl md:text-7xl font-heading font-bold leading-tight text-white mb-6">
+                    Building The Future With <span class="text-luxuryOrange">Precision</span> & <span class="text-transparent bg-clip-text bg-gradient-to-r from-white to-gray-400">Excellence</span>
+                </h1>
+                <p class="text-lg md:text-xl text-gray-300 mb-10 font-sans max-w-2xl leading-relaxed">
+                    World-class engineering and architectural solutions. We transform visionary concepts into structural masterpieces with uncompromising quality.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="#contact" class="px-8 py-4 bg-luxuryOrange hover:bg-orange-600 text-white rounded-lg font-accent font-semibold text-center transition-all flex items-center justify-center gap-2 group hover:shadow-[0_0_20px_rgba(245,158,11,0.4)]">
+                        Get Free Consultation <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+                    </a>
+                    <a href="#projects" class="px-8 py-4 bg-white/5 hover:bg-white/10 border border-white/20 backdrop-blur-sm text-white rounded-lg font-accent font-semibold text-center transition-all flex items-center justify-center gap-2">
+                        View Projects
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Floating Stats -->
+        <div class="absolute bottom-10 left-0 w-full z-10 hidden md:block">
+            <div class="max-w-7xl mx-auto px-6 md:px-12 flex justify-end gap-6">
+                <div class="glass-card p-6 rounded-xl border border-white/10 backdrop-blur-md transform hover:-translate-y-2 transition-transform w-48 fade-up" style="transition-delay: 200ms;">
+                    <div class="text-3xl font-heading font-bold text-luxuryOrange mb-1 counter" data-target="15">0</div>
+                    <div class="text-xs text-gray-400 uppercase tracking-wider font-semibold">Years Experience</div>
+                </div>
+                <div class="glass-card p-6 rounded-xl border border-white/10 backdrop-blur-md transform hover:-translate-y-2 transition-transform w-48 fade-up" style="transition-delay: 300ms;">
+                    <div class="text-3xl font-heading font-bold text-luxuryOrange mb-1"><span class="counter" data-target="500">0</span>+</div>
+                    <div class="text-xs text-gray-400 uppercase tracking-wider font-semibold">Projects Completed</div>
+                </div>
+                <div class="glass-card p-6 rounded-xl border border-white/10 backdrop-blur-md transform hover:-translate-y-2 transition-transform w-48 fade-up" style="transition-delay: 400ms;">
+                    <div class="text-3xl font-heading font-bold text-luxuryOrange mb-1"><span class="counter" data-target="98">0</span>%</div>
+                    <div class="text-xs text-gray-400 uppercase tracking-wider font-semibold">Client Satisfaction</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Scroll Indicator -->
+        <a href="#about" class="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-10 animate-bounce text-white/50 hover:text-white transition-colors">
+            <i class="fa-solid fa-chevron-down text-2xl"></i>
+        </a>
+    </section>
+
+    <!-- Trusted Brands / Clients -->
+    <section class="py-12 bg-darkNavy border-b border-white/5 overflow-hidden">
+        <div class="max-w-7xl mx-auto px-6 mb-4 text-center">
+            <p class="text-sm font-semibold text-gray-500 uppercase tracking-widest">Trusted by Industry Leaders</p>
+        </div>
+        <div class="relative w-full overflow-hidden flex">
+            <div class="animate-marquee flex space-x-16 items-center whitespace-nowrap px-8">
+                <!-- Using font awesome icons as placeholder logos for premium look -->
+                <div class="text-gray-500 hover:text-white transition-colors duration-300 text-3xl flex items-center gap-3"><i class="fa-brands fa-aws"></i> AWS Build</div>
+                <div class="text-gray-500 hover:text-white transition-colors duration-300 text-3xl flex items-center gap-3"><i class="fa-brands fa-google"></i> Google Infra</div>
+                <div class="text-gray-500 hover:text-white transition-colors duration-300 text-3xl flex items-center gap-3"><i class="fa-brands fa-microsoft"></i> MS Estates</div>
+                <div class="text-gray-500 hover:text-white transition-colors duration-300 text-3xl flex items-center gap-3"><i class="fa-brands fa-apple"></i> Apple Spaces</div>
+                <div class="text-gray-500 hover:text-white transition-colors duration-300 text-3xl flex items-center gap-3"><i class="fa-solid fa-hotel"></i> Hilton Dev</div>
+                <div class="text-gray-500 hover:text-white transition-colors duration-300 text-3xl flex items-center gap-3"><i class="fa-solid fa-city"></i> UrbanCorp</div>
+                <!-- Duplicate for seamless loop -->
+                <div class="text-gray-500 hover:text-white transition-colors duration-300 text-3xl flex items-center gap-3"><i class="fa-brands fa-aws"></i> AWS Build</div>
+                <div class="text-gray-500 hover:text-white transition-colors duration-300 text-3xl flex items-center gap-3"><i class="fa-brands fa-google"></i> Google Infra</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-24 bg-premiumDark relative overflow-hidden">
+        <div class="absolute top-0 right-0 w-[800px] h-[800px] bg-luxuryOrange/5 rounded-full blur-[120px] -translate-y-1/2 translate-x-1/3"></div>
+        <div class="max-w-7xl mx-auto px-6 md:px-12 relative z-10">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <div class="relative fade-up">
+                    <div class="rounded-2xl overflow-hidden shadow-2xl relative">
+                        <img src="assets/images/about.png" alt="About Our Company" class="w-full h-auto object-cover transform hover:scale-105 transition-transform duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-premiumDark/80 to-transparent"></div>
+                    </div>
+                    <!-- Floating Badge -->
+                    <div class="absolute -bottom-8 -right-8 bg-darkNavy border border-luxuryOrange/30 p-6 rounded-xl shadow-2xl backdrop-blur-md hidden md:block">
+                        <div class="flex items-center gap-4">
+                            <div class="w-16 h-16 bg-luxuryOrange/20 rounded-full flex items-center justify-center text-luxuryOrange text-2xl">
+                                <i class="fa-solid fa-award"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-white font-bold font-heading">ISO 9001</h4>
+                                <p class="text-sm text-gray-400">Certified Company</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="fade-up" style="transition-delay: 200ms;">
+                    <h2 class="text-sm font-bold text-luxuryOrange uppercase tracking-widest mb-2">About Our Company</h2>
+                    <h3 class="text-4xl md:text-5xl font-heading font-bold text-white mb-6">Pioneering Architectural Excellence Since 2009</h3>
+                    <p class="text-gray-400 mb-8 leading-relaxed">
+                        We are an international award-winning construction and engineering firm dedicated to transforming visionary concepts into tangible realities. With an unwavering commitment to quality, safety, and innovation, we deliver projects that stand the test of time.
+                    </p>
+                    
+                    <div class="grid sm:grid-cols-2 gap-6 mb-10">
+                        <div class="flex items-start gap-4">
+                            <div class="mt-1 text-luxuryOrange"><i class="fa-solid fa-check-circle text-xl"></i></div>
+                            <div>
+                                <h4 class="text-white font-bold font-heading mb-1">Certified Engineers</h4>
+                                <p class="text-sm text-gray-400">Top-tier industry professionals</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div class="mt-1 text-luxuryOrange"><i class="fa-solid fa-check-circle text-xl"></i></div>
+                            <div>
+                                <h4 class="text-white font-bold font-heading mb-1">Modern Equipment</h4>
+                                <p class="text-sm text-gray-400">State-of-the-art machinery</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div class="mt-1 text-luxuryOrange"><i class="fa-solid fa-check-circle text-xl"></i></div>
+                            <div>
+                                <h4 class="text-white font-bold font-heading mb-1">Safety Standards</h4>
+                                <p class="text-sm text-gray-400">Zero-compromise protocols</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div class="mt-1 text-luxuryOrange"><i class="fa-solid fa-check-circle text-xl"></i></div>
+                            <div>
+                                <h4 class="text-white font-bold font-heading mb-1">On-Time Delivery</h4>
+                                <p class="text-sm text-gray-400">Precision in execution</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <a href="#services" class="inline-flex items-center gap-2 px-6 py-3 bg-white hover:bg-gray-200 text-premiumDark font-bold rounded-lg transition-colors group">
+                        Discover Our Services <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-24 bg-darkNavy relative">
+        <div class="max-w-7xl mx-auto px-6 md:px-12">
+            <div class="text-center max-w-3xl mx-auto mb-16 fade-up">
+                <h2 class="text-sm font-bold text-luxuryOrange uppercase tracking-widest mb-2">Our Expertise</h2>
+                <h3 class="text-4xl md:text-5xl font-heading font-bold text-white mb-6">Comprehensive Engineering Solutions</h3>
+                <p class="text-gray-400">We offer a full spectrum of construction services, tailored to meet the highest standards of modern development.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Service 1 -->
+                <div class="bg-premiumDark border border-white/5 rounded-2xl p-8 hover:border-luxuryOrange/50 transition-all duration-300 group hover:-translate-y-2 hover:shadow-[0_10px_30px_rgba(245,158,11,0.1)] fade-up">
+                    <div class="w-14 h-14 bg-darkNavy rounded-xl flex items-center justify-center text-luxuryOrange text-2xl mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-house-chimney"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-white mb-3 font-heading">Residential Construction</h4>
+                    <p class="text-gray-400 text-sm mb-6 leading-relaxed">Luxury homes and modern residential complexes built with precision and premium materials.</p>
+                    <a href="#" class="text-luxuryOrange text-sm font-bold inline-flex items-center gap-2 group/link">
+                        Learn More <i class="fa-solid fa-arrow-right group-hover/link:translate-x-1 transition-transform"></i>
+                    </a>
+                </div>
+                <!-- Service 2 -->
+                <div class="bg-premiumDark border border-white/5 rounded-2xl p-8 hover:border-luxuryOrange/50 transition-all duration-300 group hover:-translate-y-2 hover:shadow-[0_10px_30px_rgba(245,158,11,0.1)] fade-up" style="transition-delay: 100ms;">
+                    <div class="w-14 h-14 bg-darkNavy rounded-xl flex items-center justify-center text-luxuryOrange text-2xl mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-city"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-white mb-3 font-heading">Commercial Construction</h4>
+                    <p class="text-gray-400 text-sm mb-6 leading-relaxed">State-of-the-art office buildings, retail spaces, and corporate headquarters.</p>
+                    <a href="#" class="text-luxuryOrange text-sm font-bold inline-flex items-center gap-2 group/link">
+                        Learn More <i class="fa-solid fa-arrow-right group-hover/link:translate-x-1 transition-transform"></i>
+                    </a>
+                </div>
+                <!-- Service 3 -->
+                <div class="bg-premiumDark border border-white/5 rounded-2xl p-8 hover:border-luxuryOrange/50 transition-all duration-300 group hover:-translate-y-2 hover:shadow-[0_10px_30px_rgba(245,158,11,0.1)] fade-up" style="transition-delay: 200ms;">
+                    <div class="w-14 h-14 bg-darkNavy rounded-xl flex items-center justify-center text-luxuryOrange text-2xl mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-hammer"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-white mb-3 font-heading">Renovation & Remodeling</h4>
+                    <p class="text-gray-400 text-sm mb-6 leading-relaxed">Transforming existing structures with modern aesthetics and structural upgrades.</p>
+                    <a href="#" class="text-luxuryOrange text-sm font-bold inline-flex items-center gap-2 group/link">
+                        Learn More <i class="fa-solid fa-arrow-right group-hover/link:translate-x-1 transition-transform"></i>
+                    </a>
+                </div>
+                <!-- Service 4 -->
+                <div class="bg-premiumDark border border-white/5 rounded-2xl p-8 hover:border-luxuryOrange/50 transition-all duration-300 group hover:-translate-y-2 hover:shadow-[0_10px_30px_rgba(245,158,11,0.1)] fade-up" style="transition-delay: 300ms;">
+                    <div class="w-14 h-14 bg-darkNavy rounded-xl flex items-center justify-center text-luxuryOrange text-2xl mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-couch"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-white mb-3 font-heading">Interior Fit-Out</h4>
+                    <p class="text-gray-400 text-sm mb-6 leading-relaxed">Premium interior finishes and custom layouts for high-end corporate environments.</p>
+                    <a href="#" class="text-luxuryOrange text-sm font-bold inline-flex items-center gap-2 group/link">
+                        Learn More <i class="fa-solid fa-arrow-right group-hover/link:translate-x-1 transition-transform"></i>
+                    </a>
+                </div>
+                <!-- Service 5 -->
+                <div class="bg-premiumDark border border-white/5 rounded-2xl p-8 hover:border-luxuryOrange/50 transition-all duration-300 group hover:-translate-y-2 hover:shadow-[0_10px_30px_rgba(245,158,11,0.1)] fade-up">
+                    <div class="w-14 h-14 bg-darkNavy rounded-xl flex items-center justify-center text-luxuryOrange text-2xl mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-compass-drafting"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-white mb-3 font-heading">Architecture & Planning</h4>
+                    <p class="text-gray-400 text-sm mb-6 leading-relaxed">Innovative architectural designs and comprehensive structural planning.</p>
+                    <a href="#" class="text-luxuryOrange text-sm font-bold inline-flex items-center gap-2 group/link">
+                        Learn More <i class="fa-solid fa-arrow-right group-hover/link:translate-x-1 transition-transform"></i>
+                    </a>
+                </div>
+                <!-- Service 6 -->
+                <div class="bg-premiumDark border border-white/5 rounded-2xl p-8 hover:border-luxuryOrange/50 transition-all duration-300 group hover:-translate-y-2 hover:shadow-[0_10px_30px_rgba(245,158,11,0.1)] fade-up" style="transition-delay: 100ms;">
+                    <div class="w-14 h-14 bg-darkNavy rounded-xl flex items-center justify-center text-luxuryOrange text-2xl mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-bridge"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-white mb-3 font-heading">Civil Engineering</h4>
+                    <p class="text-gray-400 text-sm mb-6 leading-relaxed">Large-scale infrastructure projects including bridges, roads, and utilities.</p>
+                    <a href="#" class="text-luxuryOrange text-sm font-bold inline-flex items-center gap-2 group/link">
+                        Learn More <i class="fa-solid fa-arrow-right group-hover/link:translate-x-1 transition-transform"></i>
+                    </a>
+                </div>
+                <!-- Service 7 -->
+                <div class="bg-premiumDark border border-white/5 rounded-2xl p-8 hover:border-luxuryOrange/50 transition-all duration-300 group hover:-translate-y-2 hover:shadow-[0_10px_30px_rgba(245,158,11,0.1)] fade-up" style="transition-delay: 200ms;">
+                    <div class="w-14 h-14 bg-darkNavy rounded-xl flex items-center justify-center text-luxuryOrange text-2xl mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-list-check"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-white mb-3 font-heading">Project Management</h4>
+                    <p class="text-gray-400 text-sm mb-6 leading-relaxed">End-to-end management ensuring projects are delivered on time and within budget.</p>
+                    <a href="#" class="text-luxuryOrange text-sm font-bold inline-flex items-center gap-2 group/link">
+                        Learn More <i class="fa-solid fa-arrow-right group-hover/link:translate-x-1 transition-transform"></i>
+                    </a>
+                </div>
+                <!-- Service 8 -->
+                <div class="bg-premiumDark border border-white/5 rounded-2xl p-8 hover:border-luxuryOrange/50 transition-all duration-300 group hover:-translate-y-2 hover:shadow-[0_10px_30px_rgba(245,158,11,0.1)] fade-up" style="transition-delay: 300ms;">
+                    <div class="w-14 h-14 bg-darkNavy rounded-xl flex items-center justify-center text-luxuryOrange text-2xl mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-cubes"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-white mb-3 font-heading">Steel & Concrete</h4>
+                    <p class="text-gray-400 text-sm mb-6 leading-relaxed">Robust structural framework construction utilizing advanced materials.</p>
+                    <a href="#" class="text-luxuryOrange text-sm font-bold inline-flex items-center gap-2 group/link">
+                        Learn More <i class="fa-solid fa-arrow-right group-hover/link:translate-x-1 transition-transform"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Portfolio -->
+    <section id="projects" class="py-24 bg-premiumDark">
+        <div class="max-w-7xl mx-auto px-6 md:px-12">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-12 fade-up">
+                <div class="max-w-2xl">
+                    <h2 class="text-sm font-bold text-luxuryOrange uppercase tracking-widest mb-2">Portfolio</h2>
+                    <h3 class="text-4xl md:text-5xl font-heading font-bold text-white">Featured Projects</h3>
+                </div>
+                <div class="mt-6 md:mt-0 flex gap-2 overflow-x-auto pb-2 scrollbar-hide">
+                    <button class="px-6 py-2 rounded-full bg-luxuryOrange text-white text-sm font-bold whitespace-nowrap">All Works</button>
+                    <button class="px-6 py-2 rounded-full bg-darkNavy text-gray-400 hover:text-white text-sm font-bold whitespace-nowrap transition-colors border border-white/5 hover:border-white/20">Commercial</button>
+                    <button class="px-6 py-2 rounded-full bg-darkNavy text-gray-400 hover:text-white text-sm font-bold whitespace-nowrap transition-colors border border-white/5 hover:border-white/20">Residential</button>
+                    <button class="px-6 py-2 rounded-full bg-darkNavy text-gray-400 hover:text-white text-sm font-bold whitespace-nowrap transition-colors border border-white/5 hover:border-white/20">Infrastructure</button>
+                </div>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Project 1 -->
+                <div class="group relative rounded-2xl overflow-hidden aspect-[4/5] cursor-pointer fade-up">
+                    <img src="assets/images/project-commercial.png" alt="Commercial Tower" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-premiumDark via-premiumDark/50 to-transparent opacity-80 group-hover:opacity-90 transition-opacity duration-300"></div>
+                    <div class="absolute inset-0 p-8 flex flex-col justify-end transform translate-y-8 group-hover:translate-y-0 transition-transform duration-300">
+                        <span class="text-luxuryOrange text-sm font-bold mb-2 uppercase tracking-wider opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-100">Commercial</span>
+                        <h4 class="text-2xl font-heading font-bold text-white mb-2">Nexus Corporate Tower</h4>
+                        <p class="text-gray-300 text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-200">A 45-story smart building featuring sustainable glass architecture.</p>
+                        <div class="mt-4 w-10 h-10 rounded-full bg-luxuryOrange flex items-center justify-center text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-300">
+                            <i class="fa-solid fa-arrow-right -rotate-45"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="group relative rounded-2xl overflow-hidden aspect-[4/5] cursor-pointer fade-up" style="transition-delay: 100ms;">
+                    <img src="assets/images/project-residential.png" alt="Luxury Residential" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-premiumDark via-premiumDark/50 to-transparent opacity-80 group-hover:opacity-90 transition-opacity duration-300"></div>
+                    <div class="absolute inset-0 p-8 flex flex-col justify-end transform translate-y-8 group-hover:translate-y-0 transition-transform duration-300">
+                        <span class="text-luxuryOrange text-sm font-bold mb-2 uppercase tracking-wider opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-100">Residential</span>
+                        <h4 class="text-2xl font-heading font-bold text-white mb-2">The Skyline Villas</h4>
+                        <p class="text-gray-300 text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-200">Ultra-luxury residential complex with modern concrete aesthetics.</p>
+                        <div class="mt-4 w-10 h-10 rounded-full bg-luxuryOrange flex items-center justify-center text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-300">
+                            <i class="fa-solid fa-arrow-right -rotate-45"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="group relative rounded-2xl overflow-hidden aspect-[4/5] cursor-pointer fade-up" style="transition-delay: 200ms;">
+                    <img src="assets/images/project-bridge.png" alt="Bridge Construction" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-premiumDark via-premiumDark/50 to-transparent opacity-80 group-hover:opacity-90 transition-opacity duration-300"></div>
+                    <div class="absolute inset-0 p-8 flex flex-col justify-end transform translate-y-8 group-hover:translate-y-0 transition-transform duration-300">
+                        <span class="text-luxuryOrange text-sm font-bold mb-2 uppercase tracking-wider opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-100">Infrastructure</span>
+                        <h4 class="text-2xl font-heading font-bold text-white mb-2">Crescent Bay Bridge</h4>
+                        <p class="text-gray-300 text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-200">A marvel of modern civil engineering connecting two major districts.</p>
+                        <div class="mt-4 w-10 h-10 rounded-full bg-luxuryOrange flex items-center justify-center text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-300">
+                            <i class="fa-solid fa-arrow-right -rotate-45"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-12 text-center">
+                <a href="#" class="inline-flex items-center gap-2 px-8 py-4 border border-white/20 hover:border-luxuryOrange hover:bg-luxuryOrange/10 text-white font-bold rounded-lg transition-all duration-300 group">
+                    View All Projects <i class="fa-solid fa-spinner animate-spin-slow group-hover:hidden"></i><i class="fa-solid fa-arrow-right hidden group-hover:inline-block"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="py-24 bg-darkNavy relative border-t border-b border-white/5">
+        <div class="absolute left-0 top-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-luxuryOrange/5 rounded-full blur-[100px] pointer-events-none"></div>
+        <div class="max-w-7xl mx-auto px-6 md:px-12 relative z-10">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <div class="fade-up">
+                    <h2 class="text-sm font-bold text-luxuryOrange uppercase tracking-widest mb-2">Why Choose Us</h2>
+                    <h3 class="text-4xl md:text-5xl font-heading font-bold text-white mb-6">Building Trust Through Unmatched Quality</h3>
+                    <p class="text-gray-400 mb-8 leading-relaxed">
+                        We don't just build structures; we build relationships. Our approach combines innovative technology with decades of hands-on expertise to deliver unparalleled results.
+                    </p>
+                    
+                    <div class="space-y-6">
+                        <!-- Progress Item -->
+                        <div>
+                            <div class="flex justify-between text-sm font-bold text-white mb-2 font-heading">
+                                <span>Quality Materials</span>
+                                <span class="text-luxuryOrange">100%</span>
+                            </div>
+                            <div class="w-full bg-premiumDark h-2 rounded-full overflow-hidden">
+                                <div class="bg-luxuryOrange h-full rounded-full w-0 transition-all duration-1000 progress-bar" data-width="100%"></div>
+                            </div>
+                        </div>
+                        <!-- Progress Item -->
+                        <div>
+                            <div class="flex justify-between text-sm font-bold text-white mb-2 font-heading">
+                                <span>Expert Team</span>
+                                <span class="text-luxuryOrange">95%</span>
+                            </div>
+                            <div class="w-full bg-premiumDark h-2 rounded-full overflow-hidden">
+                                <div class="bg-luxuryOrange h-full rounded-full w-0 transition-all duration-1000 progress-bar" data-width="95%"></div>
+                            </div>
+                        </div>
+                        <!-- Progress Item -->
+                        <div>
+                            <div class="flex justify-between text-sm font-bold text-white mb-2 font-heading">
+                                <span>Modern Technology</span>
+                                <span class="text-luxuryOrange">90%</span>
+                            </div>
+                            <div class="w-full bg-premiumDark h-2 rounded-full overflow-hidden">
+                                <div class="bg-luxuryOrange h-full rounded-full w-0 transition-all duration-1000 progress-bar" data-width="90%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-2 gap-6 fade-up" style="transition-delay: 200ms;">
+                    <div class="space-y-6 mt-12">
+                        <div class="bg-premiumDark p-6 rounded-2xl border border-white/5 hover:border-luxuryOrange/30 transition-colors">
+                            <div class="w-12 h-12 bg-darkNavy rounded-full flex items-center justify-center text-luxuryOrange text-xl mb-4">
+                                <i class="fa-solid fa-shield-halved"></i>
+                            </div>
+                            <h4 class="text-white font-bold mb-2">24/7 Support</h4>
+                            <p class="text-xs text-gray-400">Dedicated assistance for all client queries.</p>
+                        </div>
+                        <div class="bg-premiumDark p-6 rounded-2xl border border-white/5 hover:border-luxuryOrange/30 transition-colors">
+                            <div class="w-12 h-12 bg-darkNavy rounded-full flex items-center justify-center text-luxuryOrange text-xl mb-4">
+                                <i class="fa-solid fa-coins"></i>
+                            </div>
+                            <h4 class="text-white font-bold mb-2">Affordable Pricing</h4>
+                            <p class="text-xs text-gray-400">Competitive rates without compromising quality.</p>
+                        </div>
+                    </div>
+                    <div class="space-y-6">
+                        <div class="bg-premiumDark p-6 rounded-2xl border border-white/5 hover:border-luxuryOrange/30 transition-colors">
+                            <div class="w-12 h-12 bg-darkNavy rounded-full flex items-center justify-center text-luxuryOrange text-xl mb-4">
+                                <i class="fa-solid fa-clock"></i>
+                            </div>
+                            <h4 class="text-white font-bold mb-2">Timely Delivery</h4>
+                            <p class="text-xs text-gray-400">Strict adherence to project timelines.</p>
+                        </div>
+                        <div class="bg-premiumDark p-6 rounded-2xl border border-white/5 hover:border-luxuryOrange/30 transition-colors">
+                            <div class="w-12 h-12 bg-darkNavy rounded-full flex items-center justify-center text-luxuryOrange text-xl mb-4">
+                                <i class="fa-solid fa-leaf"></i>
+                            </div>
+                            <h4 class="text-white font-bold mb-2">Eco-Friendly</h4>
+                            <p class="text-xs text-gray-400">Sustainable building practices.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Work Process Section -->
+    <section class="py-24 bg-premiumDark">
+        <div class="max-w-7xl mx-auto px-6 md:px-12">
+            <div class="text-center max-w-3xl mx-auto mb-20 fade-up">
+                <h2 class="text-sm font-bold text-luxuryOrange uppercase tracking-widest mb-2">How We Work</h2>
+                <h3 class="text-4xl md:text-5xl font-heading font-bold text-white mb-6">Our Streamlined Process</h3>
+            </div>
+
+            <div class="relative">
+                <!-- Connecting Line -->
+                <div class="absolute top-1/2 left-0 w-full h-0.5 bg-white/10 -translate-y-1/2 hidden lg:block"></div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
+                    <!-- Step 1 -->
+                    <div class="relative text-center group fade-up">
+                        <div class="w-20 h-20 mx-auto bg-darkNavy border border-white/20 rounded-full flex items-center justify-center text-2xl text-white font-heading font-bold relative z-10 group-hover:border-luxuryOrange group-hover:text-luxuryOrange group-hover:scale-110 transition-all duration-300">
+                            1
+                            <div class="absolute inset-0 bg-luxuryOrange/20 rounded-full animate-ping opacity-0 group-hover:opacity-100"></div>
+                        </div>
+                        <h4 class="text-xl font-bold text-white mt-6 mb-2">Consultation</h4>
+                        <p class="text-sm text-gray-400">Understanding your vision and requirements.</p>
+                    </div>
+                    <!-- Step 2 -->
+                    <div class="relative text-center group fade-up" style="transition-delay: 100ms;">
+                        <div class="w-20 h-20 mx-auto bg-darkNavy border border-white/20 rounded-full flex items-center justify-center text-2xl text-white font-heading font-bold relative z-10 group-hover:border-luxuryOrange group-hover:text-luxuryOrange group-hover:scale-110 transition-all duration-300">
+                            2
+                        </div>
+                        <h4 class="text-xl font-bold text-white mt-6 mb-2">Planning & Design</h4>
+                        <p class="text-sm text-gray-400">Creating detailed blueprints and schedules.</p>
+                    </div>
+                    <!-- Step 3 -->
+                    <div class="relative text-center group fade-up" style="transition-delay: 200ms;">
+                        <div class="w-20 h-20 mx-auto bg-luxuryOrange rounded-full flex items-center justify-center text-2xl text-white font-heading font-bold relative z-10 shadow-[0_0_20px_rgba(245,158,11,0.5)] transform scale-110">
+                            3
+                        </div>
+                        <h4 class="text-xl font-bold text-white mt-6 mb-2">Construction</h4>
+                        <p class="text-sm text-gray-400">Executing the plan with precision.</p>
+                    </div>
+                    <!-- Step 4 -->
+                    <div class="relative text-center group fade-up" style="transition-delay: 300ms;">
+                        <div class="w-20 h-20 mx-auto bg-darkNavy border border-white/20 rounded-full flex items-center justify-center text-2xl text-white font-heading font-bold relative z-10 group-hover:border-luxuryOrange group-hover:text-luxuryOrange group-hover:scale-110 transition-all duration-300">
+                            4
+                        </div>
+                        <h4 class="text-xl font-bold text-white mt-6 mb-2">Inspection</h4>
+                        <p class="text-sm text-gray-400">Rigorous quality and safety checks.</p>
+                    </div>
+                    <!-- Step 5 -->
+                    <div class="relative text-center group fade-up" style="transition-delay: 400ms;">
+                        <div class="w-20 h-20 mx-auto bg-darkNavy border border-white/20 rounded-full flex items-center justify-center text-2xl text-white font-heading font-bold relative z-10 group-hover:border-luxuryOrange group-hover:text-luxuryOrange group-hover:scale-110 transition-all duration-300">
+                            5
+                        </div>
+                        <h4 class="text-xl font-bold text-white mt-6 mb-2">Final Delivery</h4>
+                        <p class="text-sm text-gray-400">Handing over the completed masterpiece.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section id="testimonials" class="py-24 bg-darkNavy relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGNpcmNsZSBjeD0iMSIgY3k9IjEiIHI9IjEiIGZpbGw9IiNmZmZmZmYiLz48L3N2Zz4=')] [mask-image:linear-gradient(to_bottom,white,transparent)]"></div>
+        
+        <div class="max-w-7xl mx-auto px-6 md:px-12 relative z-10">
+            <div class="text-center mb-16 fade-up">
+                <h2 class="text-sm font-bold text-luxuryOrange uppercase tracking-widest mb-2">Testimonials</h2>
+                <h3 class="text-4xl md:text-5xl font-heading font-bold text-white">What Our Clients Say</h3>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Review 1 -->
+                <div class="bg-premiumDark/80 backdrop-blur-md p-8 rounded-2xl border border-white/10 relative fade-up">
+                    <i class="fa-solid fa-quote-right absolute top-8 right-8 text-4xl text-white/5"></i>
+                    <div class="flex text-luxuryOrange mb-4 text-sm">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="text-gray-300 italic mb-6 leading-relaxed">"DEVLABCONSTRUCTIONS delivered our corporate headquarters ahead of schedule without compromising a single detail. Their professionalism and engineering expertise are truly world-class."</p>
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 rounded-full bg-gray-600 overflow-hidden">
+                            <img src="https://i.pravatar.cc/150?img=33" alt="Client" class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <h5 class="text-white font-bold">Michael Sterling</h5>
+                            <p class="text-xs text-gray-500">CEO, Nexus Corp</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review 2 -->
+                <div class="bg-premiumDark/80 backdrop-blur-md p-8 rounded-2xl border border-white/10 relative transform md:-translate-y-4 shadow-2xl shadow-black/50 fade-up" style="transition-delay: 100ms;">
+                    <i class="fa-solid fa-quote-right absolute top-8 right-8 text-4xl text-white/5"></i>
+                    <div class="flex text-luxuryOrange mb-4 text-sm">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="text-gray-300 italic mb-6 leading-relaxed">"The level of precision in their residential projects is unmatched. They turned our vision for luxury villas into a stunning reality. Highly recommended for premium builds."</p>
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 rounded-full bg-gray-600 overflow-hidden">
+                            <img src="https://i.pravatar.cc/150?img=44" alt="Client" class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <h5 class="text-white font-bold">Sarah Jenkins</h5>
+                            <p class="text-xs text-gray-500">Real Estate Developer</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review 3 -->
+                <div class="bg-premiumDark/80 backdrop-blur-md p-8 rounded-2xl border border-white/10 relative fade-up" style="transition-delay: 200ms;">
+                    <i class="fa-solid fa-quote-right absolute top-8 right-8 text-4xl text-white/5"></i>
+                    <div class="flex text-luxuryOrange mb-4 text-sm">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+                    </div>
+                    <p class="text-gray-300 italic mb-6 leading-relaxed">"Exceptional civil engineering capabilities. They handled our infrastructure project flawlessly, maintaining strict safety standards throughout the entire process."</p>
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 rounded-full bg-gray-600 overflow-hidden">
+                            <img src="https://i.pravatar.cc/150?img=11" alt="Client" class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <h5 class="text-white font-bold">David Chen</h5>
+                            <p class="text-xs text-gray-500">City Infrastructure Director</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="py-24 bg-premiumDark">
+        <div class="max-w-7xl mx-auto px-6 md:px-12">
+            <div class="text-center mb-16 fade-up">
+                <h2 class="text-sm font-bold text-luxuryOrange uppercase tracking-widest mb-2">Our Leadership</h2>
+                <h3 class="text-4xl md:text-5xl font-heading font-bold text-white">Meet The Experts</h3>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Team 1 -->
+                <div class="group relative rounded-2xl overflow-hidden fade-up">
+                    <img src="assets/images/team-ceo.png" alt="CEO" class="w-full aspect-[3/4] object-cover transition-transform duration-500 group-hover:scale-105">
+                    <div class="absolute inset-0 bg-gradient-to-t from-premiumDark via-premiumDark/20 to-transparent opacity-90"></div>
+                    <div class="absolute bottom-0 left-0 w-full p-6 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+                        <h4 class="text-xl font-bold text-white font-heading">Robert Caldwell</h4>
+                        <p class="text-luxuryOrange text-sm mb-4">Founder & CEO</p>
+                        <div class="flex gap-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <a href="#" class="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center text-white hover:bg-luxuryOrange transition-colors"><i class="fa-brands fa-linkedin-in text-sm"></i></a>
+                            <a href="#" class="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center text-white hover:bg-luxuryOrange transition-colors"><i class="fa-brands fa-twitter text-sm"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Team 2 -->
+                <div class="group relative rounded-2xl overflow-hidden fade-up" style="transition-delay: 100ms;">
+                    <img src="assets/images/team-engineer.png" alt="Chief Engineer" class="w-full aspect-[3/4] object-cover transition-transform duration-500 group-hover:scale-105">
+                    <div class="absolute inset-0 bg-gradient-to-t from-premiumDark via-premiumDark/20 to-transparent opacity-90"></div>
+                    <div class="absolute bottom-0 left-0 w-full p-6 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+                        <h4 class="text-xl font-bold text-white font-heading">Elena Rostova</h4>
+                        <p class="text-luxuryOrange text-sm mb-4">Chief Structural Engineer</p>
+                        <div class="flex gap-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <a href="#" class="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center text-white hover:bg-luxuryOrange transition-colors"><i class="fa-brands fa-linkedin-in text-sm"></i></a>
+                            <a href="#" class="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center text-white hover:bg-luxuryOrange transition-colors"><i class="fa-brands fa-twitter text-sm"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Team 3 -->
+                <div class="group relative rounded-2xl overflow-hidden fade-up" style="transition-delay: 200ms;">
+                    <img src="assets/images/team-architect.png" alt="Lead Architect" class="w-full aspect-[3/4] object-cover transition-transform duration-500 group-hover:scale-105">
+                    <div class="absolute inset-0 bg-gradient-to-t from-premiumDark via-premiumDark/20 to-transparent opacity-90"></div>
+                    <div class="absolute bottom-0 left-0 w-full p-6 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+                        <h4 class="text-xl font-bold text-white font-heading">Marcus Thorne</h4>
+                        <p class="text-luxuryOrange text-sm mb-4">Lead Architect</p>
+                        <div class="flex gap-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <a href="#" class="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center text-white hover:bg-luxuryOrange transition-colors"><i class="fa-brands fa-linkedin-in text-sm"></i></a>
+                            <a href="#" class="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center text-white hover:bg-luxuryOrange transition-colors"><i class="fa-brands fa-twitter text-sm"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact & Footer Section combined for premium feel -->
+    <section id="contact" class="bg-darkNavy border-t border-white/5 relative">
+        <div class="absolute inset-0 bg-[url('assets/images/project-interior.png')] opacity-5 bg-cover bg-center mix-blend-luminosity"></div>
+        
+        <!-- Contact Top part -->
+        <div class="max-w-7xl mx-auto px-6 md:px-12 pt-24 pb-12 relative z-10 border-b border-white/10">
+            <div class="grid lg:grid-cols-2 gap-16">
+                <div class="fade-up">
+                    <h2 class="text-4xl md:text-5xl font-heading font-bold text-white mb-6">Let's Build Something <span class="text-luxuryOrange">Extraordinary</span></h2>
+                    <p class="text-gray-400 mb-8 max-w-md">Ready to start your next project? Contact our team of experts for a comprehensive consultation and quote.</p>
+                    
+                    <div class="space-y-6 mb-8">
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 rounded-full bg-premiumDark border border-white/10 flex items-center justify-center text-luxuryOrange flex-shrink-0">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </div>
+                            <div>
+                                <h5 class="text-white font-bold mb-1">Head Office</h5>
+                                <p class="text-gray-400 text-sm">100 Premium Tower, Corporate Ave<br>New York, NY 10001</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 rounded-full bg-premiumDark border border-white/10 flex items-center justify-center text-luxuryOrange flex-shrink-0">
+                                <i class="fa-solid fa-phone"></i>
+                            </div>
+                            <div>
+                                <h5 class="text-white font-bold mb-1">Call Us 24/7</h5>
+                                <p class="text-gray-400 text-sm">+1 (555) 123-4567<br>+1 (555) 987-6543</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 rounded-full bg-premiumDark border border-white/10 flex items-center justify-center text-luxuryOrange flex-shrink-0">
+                                <i class="fa-solid fa-envelope"></i>
+                            </div>
+                            <div>
+                                <h5 class="text-white font-bold mb-1">Email Us</h5>
+                                <p class="text-gray-400 text-sm">contact@devlabconstruction.com<br>projects@devlabconstruction.com</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-premiumDark p-8 rounded-2xl border border-white/10 fade-up" style="transition-delay: 200ms;">
+                    <h3 class="text-2xl font-bold text-white mb-6 font-heading">Request a Quote</h3>
+                    <form class="space-y-4">
+                        <div class="grid grid-cols-2 gap-4">
+                            <input type="text" placeholder="First Name" class="w-full bg-darkNavy border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-luxuryOrange transition-colors">
+                            <input type="text" placeholder="Last Name" class="w-full bg-darkNavy border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-luxuryOrange transition-colors">
+                        </div>
+                        <input type="email" placeholder="Email Address" class="w-full bg-darkNavy border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-luxuryOrange transition-colors">
+                        <select class="w-full bg-darkNavy border border-white/10 rounded-lg px-4 py-3 text-gray-400 focus:outline-none focus:border-luxuryOrange transition-colors appearance-none">
+                            <option value="">Select Service Type</option>
+                            <option value="residential">Residential Construction</option>
+                            <option value="commercial">Commercial Construction</option>
+                            <option value="renovation">Renovation</option>
+                            <option value="civil">Civil Engineering</option>
+                        </select>
+                        <textarea placeholder="Project Details" rows="4" class="w-full bg-darkNavy border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-luxuryOrange transition-colors resize-none"></textarea>
+                        <button type="button" class="w-full bg-luxuryOrange hover:bg-orange-600 text-white font-bold py-4 rounded-lg transition-colors shadow-[0_4px_14px_0_rgba(245,158,11,0.39)]">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer Bottom -->
+        <footer class="max-w-7xl mx-auto px-6 md:px-12 py-12 relative z-10">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <div class="col-span-1 md:col-span-1">
+                    <a href="#" class="text-2xl font-heading font-bold text-white flex items-center gap-2 mb-6">
+                        <i class="fa-solid fa-building text-luxuryOrange"></i> DEVLAB<span class="text-luxuryOrange">CONSTRUCTIONS</span>
+                    </a>
+                    <p class="text-sm text-gray-400 mb-6">Setting the standard in luxury construction and premium architectural engineering globally.</p>
+                    <div class="flex gap-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors"><i class="fa-brands fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="text-white font-bold mb-6 font-heading">Quick Links</h4>
+                    <ul class="space-y-3 text-sm text-gray-400">
+                        <li><a href="#about" class="hover:text-luxuryOrange transition-colors">About Us</a></li>
+                        <li><a href="#projects" class="hover:text-luxuryOrange transition-colors">Our Portfolio</a></li>
+                        <li><a href="#testimonials" class="hover:text-luxuryOrange transition-colors">Testimonials</a></li>
+                        <li><a href="#" class="hover:text-luxuryOrange transition-colors">Careers</a></li>
+                        <li><a href="#" class="hover:text-luxuryOrange transition-colors">Blog & News</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-bold mb-6 font-heading">Services</h4>
+                    <ul class="space-y-3 text-sm text-gray-400">
+                        <li><a href="#" class="hover:text-luxuryOrange transition-colors">Commercial Build</a></li>
+                        <li><a href="#" class="hover:text-luxuryOrange transition-colors">Residential</a></li>
+                        <li><a href="#" class="hover:text-luxuryOrange transition-colors">Civil Engineering</a></li>
+                        <li><a href="#" class="hover:text-luxuryOrange transition-colors">Architecture</a></li>
+                        <li><a href="#" class="hover:text-luxuryOrange transition-colors">Renovations</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-bold mb-6 font-heading">Newsletter</h4>
+                    <p class="text-sm text-gray-400 mb-4">Subscribe to get the latest news and project updates.</p>
+                    <div class="flex">
+                        <input type="email" placeholder="Your email" class="bg-premiumDark border border-white/10 border-r-0 rounded-l-lg px-4 py-2 w-full text-sm text-white focus:outline-none focus:border-luxuryOrange">
+                        <button class="bg-luxuryOrange text-white px-4 py-2 rounded-r-lg hover:bg-orange-600 transition-colors">
+                            <i class="fa-solid fa-paper-plane"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-gray-500">
+                <p>&copy; 2026 DEVLABCONSTRUCTIONS. All rights reserved.</p>
+                <div class="flex gap-4 mt-4 md:mt-0">
+                    <a href="#" class="hover:text-white transition-colors">Privacy Policy</a>
+                    <a href="#" class="hover:text-white transition-colors">Terms of Service</a>
+                </div>
+            </div>
+        </footer>
+    </section>
+
+    <!-- Floating Action Buttons -->
+    <a href="https://wa.me/1234567890" target="_blank" class="fixed bottom-6 right-6 w-14 h-14 bg-green-500 text-white rounded-full flex items-center justify-center text-3xl shadow-lg hover:scale-110 transition-transform z-40 animate-bounce" style="animation-duration: 3s;">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+    
+    <button id="back-to-top" class="fixed bottom-24 right-6 w-12 h-12 bg-darkNavy border border-white/10 text-white rounded-full flex items-center justify-center text-xl shadow-lg hover:bg-luxuryOrange hover:border-luxuryOrange transition-all z-40 opacity-0 invisible translate-y-4">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+    <!-- Scripts -->
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
